@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "9ab92600-674e-4ad2-9dae-351147bc5a0e",
+		"name": "rUBI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create carpark",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"UB1\",\n\"name\":\"UB1 Car Parking\",\n\"description\":\"UB1 Car Parking desc\",\n\"chargingCapacity\":100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3002/carpark/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "carpark",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3002/carpark",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark"
+					]
+				},
+				"description": "topics"
+			},
+			"response": []
+		},
+		{
+			"name": "chargingpoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3002/carpark/UB1/chargingpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						"UB1",
+						"chargingpoints"
+					]
+				},
+				"description": "topics"
+			},
+			"response": []
+		},
+		{
+			"name": "chargingpoints CP1 Plugin",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"disabled": false,
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"CP1\",\n\"name\":\"ChargingPoint#1\",\n\"description\":\"ChargingPoint#1\",\n\"inUse\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3002/carpark/UB1/chargingpoints/CP1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						"UB1",
+						"chargingpoints",
+						"CP1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chargingpoints CP1 Unplugin",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"disabled": false,
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"CP1\",\n\"name\":\"ChargingPoint#1\",\n\"description\":\"ChargingPoint#1\",\n\"inUse\":0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3002/carpark/UB1/chargingpoints/CP1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						"UB1",
+						"chargingpoints",
+						"CP1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chargingpoints UB1 AvlCapacity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3002/carpark/UB1/chargingpointsCapAvailable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						"UB1",
+						"chargingpointsCapAvailable"
+					]
+				},
+				"description": "topics"
+			},
+			"response": []
+		},
+		{
+			"name": "chargingpoints UB1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3002/carpark/UB1/chargingpoints/CP1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"carpark",
+						"UB1",
+						"chargingpoints",
+						"CP1"
+					]
+				},
+				"description": "topics"
+			},
+			"response": []
+		}
+	]
+}
